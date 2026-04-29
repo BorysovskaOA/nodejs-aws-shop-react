@@ -36,3 +36,37 @@ Runs tests in console, in browser or with coverage.
 ### `lint`, `prettier`
 
 Runs linting and formatting for all files in `src` folder.
+
+## Infra
+
+Link to S3: https://nodejsawsshopreactstack-nodejsawsshopreactbucket3f-zmwqh1s5qceo.s3.eu-north-1.amazonaws.com/
+Should not have public access
+
+Link to CF: https://d180fy39z34bng.cloudfront.net/
+Should have public acess
+
+## Available infra scripts:
+
+### Prerequisites
+
+!!!Needs latest verison of the source to work with updated `dist` folder.
+1. Build project 
+```npm run build```
+2. Go to infra folder:
+```cd infra```
+
+### `bootstrap`
+
+Prepares your AWS account for CDK. Creates the necessary resources to store assets during deployment.
+
+### `diff`
+
+Compares the specified stack and its dependencies with the deployed stack. Use this to visualize infrastructure changes before applying them.
+
+### `deploy`
+
+Deploys the infrastructure resources to your AWS account based on the defined stacks.
+
+### `destroy`
+
+Removes all AWS resources associated with the stacks to ensure no infrastructure is left behind.
